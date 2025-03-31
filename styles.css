@@ -105,13 +105,14 @@ h1 {
 /* Clickable Hidden Link */
 /* Clickable Hidden Link */
 /* Clickable Hidden Link (Aligned Properly) */
+/* Clickable Hidden Link (Perfect Alignment) */
 .hidden-link {
     position: absolute;
-    top: 42%;  /* Match the text position */
-    left: 50%; 
-    width: 120px; /* Match text width */
+    top: 42.5%;  /* Slightly adjusted */
+    left: 50%;  
+    width: 120px;  
     height: 30px;
-    transform: translate(-50%, -50%); /* Center properly */
+    transform: translate(-50%, -50%); /* Keep centered */
     opacity: 0.1;
     cursor: pointer;
     background: rgba(255, 255, 255, 0.05);
@@ -124,14 +125,19 @@ h1 {
     background: rgba(255, 255, 255, 0.3);
 }
 
-/* Hazy and Hard-to-Spot Text (Perfectly Centered) */
+/* Hazy and Hard-to-Spot Text (Now Matches the Link) */
 .hidden-text {
     position: absolute;
-    top: 42%;
+    top: 42.5%; /* Exact same as the link */
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 14px;
     color: rgba(255, 255, 255, 0.2);
-    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1
-
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+    filter: blur(0.5px);
+    opacity: 0.3;
+    pointer-events: none;
+    width: 120px;
+    text-align: center;
 }
+
