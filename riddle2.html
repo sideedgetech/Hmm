@@ -28,17 +28,17 @@
     </div>
 
     <script>
-        function checkAnswer() {
-            let ans1 = document.getElementById("answer1").value.toLowerCase();
-            let ans2 = document.getElementById("answer2").value.toLowerCase();
+    function checkAnswer() {
+        let ans1 = document.getElementById("answer1").value.trim().toLowerCase();
+        let ans2 = document.getElementById("answer2").value.trim().toLowerCase();
 
-            if (ans1 === "Faze" || ans2 === "Chat Revive") {
-                window.location.href = "finalpage.html"; // Redirect to next page
-            } else {
-                document.getElementById("result").innerText = "Wrong answer! Try again.";
-            }
+        if (ans1 === "faze" || ans2 === "chat revive") {
+            window.location.href = "finalpage.html"; // Redirect to next page
+        } else {
+            document.getElementById("result").innerText = "Wrong answer! Try again.";
         }
-    </script>
+    }
+</script>
 
 </body>
 </html>
