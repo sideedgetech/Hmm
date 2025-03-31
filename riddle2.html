@@ -13,12 +13,12 @@
         <p>Only the worthy can pass. Answer one of these correctly to proceed.</p>
 
         <div class="riddle-box">
-            <p><strong>Riddle 1:</strong> I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?</p>
+            <p><strong>Riddle 1:</strong> Lines were drawn, guesses flew, Hype’s first game—who brought it to you?</p>
             <input type="text" id="answer1" placeholder="Your answer here">
         </div>
 
         <div class="riddle-box">
-            <p><strong>Riddle 2:</strong> The more you take, the more you leave behind. What am I?</p>
+            <p><strong>Riddle 2:</strong> Two words strong, they wake the dead, Summoned when the chat has fled. What role brings the silence to life?</p>
             <input type="text" id="answer2" placeholder="Your answer here">
         </div>
 
@@ -32,7 +32,7 @@
             let ans1 = document.getElementById("answer1").value.toLowerCase();
             let ans2 = document.getElementById("answer2").value.toLowerCase();
 
-            if (ans1 === "echo" || ans2 === "footsteps") {
+            if (ans1 === "Faze" || ans2 === "Chat Revive") {
                 window.location.href = "finalpage.html"; // Redirect to next page
             } else {
                 document.getElementById("result").innerText = "Wrong answer! Try again.";
