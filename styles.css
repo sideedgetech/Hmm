@@ -105,14 +105,15 @@ h1 {
 /* Clickable Hidden Link */
 .hidden-link {
     position: absolute;
-    top: 40%;  /* Adjust this to position the clickable area */
+    top: 42%;  /* Adjust this to position it correctly */
     left: 50%;
-    width: 50px;  
-    height: 50px;
-    opacity: 0; /* Completely invisible but still clickable */
+    width: 60px;  
+    height: 30px;
+    opacity: 0.001; /* Almost invisible but still there */
     cursor: pointer;
+    background: rgba(255, 255, 255, 0.05); /* Makes it slightly visible */
+    border-radius: 5px;
 }
-
 
 /* Hazy and Hard-to-Spot Text */
 .hidden-text {
@@ -121,12 +122,9 @@ h1 {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 14px;
-    color: rgba(255, 255, 255, 0.08); /* Slightly more visible */
-    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.05); /* Subtle glow */
-    filter: blur(1px); /* Light blur */
-    opacity: 0.1; /* Low opacity but not invisible */
+    color: rgba(255, 255, 255, 0.12); /* Slightly visible */
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.05);
+    filter: blur(1px);
+    opacity: 0.1;
     pointer-events: none;
-
-
-
 }
