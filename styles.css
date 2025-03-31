@@ -103,36 +103,26 @@ h1 {
 }
 
 /* Clickable Hidden Link (Aligned Properly) */
-.hidden-link {
-    position: absolute;
-    top: 50%;  /* Adjust this based on the image */
-    left: 50%; 
-    width: 120px;
-    height: 30px;
-    transform: translate(-50%, -50%);
-    opacity: 0.05;
-    cursor: pointer;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 5px;
-    transition: opacity 0.3s ease-in-out, background 0.3s ease-in-out;
-}
-
-.hidden-link:hover {
-    opacity: 1;
-    background: rgba(255, 255, 255, 0.3);
-}
-
-/* Hazy and Hard-to-Spot Text (Now Positioned Correctly) */
+/* Hazy and Hard-to-Spot Text (Now in Black) */
 .hidden-text {
     position: absolute;
-    top: 50%; /* Ensures it's inside the image */
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 14px;
-    color: rgba(255, 255, 255, 0.25);
-    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3);
+    color: rgba(0, 0, 0, 0.3); /* Black but slightly hidden */
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
     filter: blur(1px);
     opacity: 0.4;
     pointer-events: none;
     width: 120px;
+    text-align: center;
+    transition: opacity 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
 
+/* When Hovering, Make the Text Clearly Visible */
+.hidden-link:hover + .hidden-text {
+    opacity: 1;
+    filter: blur(0);
+    color: rgba(0, 0, 0, 0.8); /* Turns black on hover */
+}
