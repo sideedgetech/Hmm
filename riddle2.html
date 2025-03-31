@@ -10,15 +10,19 @@
 
     <div class="container">
         <h1>Welcome to Riddle 2</h1>
-        <p>Only the worthy can pass. Answer one of these correctly to proceed.</p>
+        <p>Only the worthy can pass. Answer both of these correctly to proceed.</p>
 
         <div class="riddle-box">
-            <p><strong>Riddle 1:</strong> Lines were drawn, guesses flew, Hype’s first game—who brought it to you?</p>
+            <p style="font-size: 24px; font-weight: bold; font-family: 'Georgia', serif; color: #333;">
+                <strong>Riddle 1:</strong> Lines were drawn, guesses flew, Hype’s first game—who brought it to you?
+            </p>
             <input type="text" id="answer1" placeholder="Your answer here">
         </div>
 
         <div class="riddle-box">
-            <p><strong>Riddle 2:</strong> Two words strong, they wake the dead, Summoned when the chat has fled. What role brings the silence to life?</p>
+            <p style="font-size: 24px; font-weight: bold; font-family: 'Georgia', serif; color: #333;">
+                <strong>Riddle 2:</strong> Two words strong, they wake the dead, Summoned when the chat has fled. What role brings the silence to life?
+            </p>
             <input type="text" id="answer2" placeholder="Your answer here">
         </div>
 
@@ -32,13 +36,14 @@
         let ans1 = document.getElementById("answer1").value.trim().toLowerCase();
         let ans2 = document.getElementById("answer2").value.trim().toLowerCase();
 
-        if (ans1 === "faze" || ans2 === "chat revive") {
+        // Check if both answers are correct
+        if (ans1 === "faze" && ans2 === "chat revive") {
             window.location.href = "finalpage.html"; // Redirect to next page
         } else {
-            document.getElementById("result").innerText = "Wrong answer! Try again.";
+            document.getElementById("result").innerText = "Wrong answers! Both answers are needed to proceed.";
         }
     }
-</script>
+    </script>
 
 </body>
 </html>
