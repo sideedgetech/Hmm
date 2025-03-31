@@ -97,3 +97,17 @@ h1 {
     0% { opacity: 0.5; }
     100% { opacity: 1; }
 }
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.hidden-link {
+    position: absolute;
+    top: 30%; /* Adjust this based on the correct clickable area */
+    left: 40%; /* Adjust this too */
+    width: 50px; /* Make this as small or large as needed */
+    height: 50px;
+    opacity: 0; /* Keeps it invisible but still clickable */
+    cursor: pointer;
+}
