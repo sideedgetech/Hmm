@@ -102,12 +102,30 @@ h1 {
     display: inline-block;
 }
 
+/* Clickable Hidden Link */
 .hidden-link {
     position: absolute;
-    top: 30%; /* Adjust this based on the correct clickable area */
-    left: 40%; /* Adjust this too */
-    width: 50px; /* Make this as small or large as needed */
+    top: 40%;  /* Adjust this to position the clickable area */
+    left: 50%;
+    width: 50px;  
     height: 50px;
-    opacity: 0; /* Keeps it invisible but still clickable */
+    opacity: 0; /* Completely invisible but still clickable */
     cursor: pointer;
+}
+
+
+.hidden-text {
+    position: absolute;
+    top: 42%;  /* Adjust this to align near the hidden link */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.05); /* Almost invisible */
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.03); /* Very faint glow */
+    filter: blur(2px); /* Adds extra haze */
+    opacity: 0.03; /* Super low opacity */
+    pointer-events: none; /* Prevent accidental highlighting */
+}
+
+
 }
