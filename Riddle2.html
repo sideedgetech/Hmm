@@ -3,41 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Riddle Stage 2</title>
+    <title>Riddle 2 | Hype Squad Riddle</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <div class="container">
-        <h1>Stage 2 - Solve the Riddles</h1>
-        <p>Answer either of these riddles correctly to proceed.</p>
-        
-        <div class="riddle">
-            <p>Riddle 1: I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?</p>
+        <h1>Welcome to Riddle 2</h1>
+        <p>Only the worthy can pass. Answer one of these correctly to proceed.</p>
+
+        <div class="riddle-box">
+            <p><strong>Riddle 1:</strong> I speak without a mouth and hear without ears. I have no body, but I come alive with the wind. What am I?</p>
             <input type="text" id="answer1" placeholder="Your answer here">
         </div>
 
-        <div class="riddle">
-            <p>Riddle 2: The more you take, the more you leave behind. What am I?</p>
+        <div class="riddle-box">
+            <p><strong>Riddle 2:</strong> The more you take, the more you leave behind. What am I?</p>
             <input type="text" id="answer2" placeholder="Your answer here">
         </div>
 
         <button onclick="checkAnswer()">Submit</button>
+
         <p id="result"></p>
     </div>
 
     <script>
         function checkAnswer() {
-            let answer1 = document.getElementById("answer1").value.toLowerCase();
-            let answer2 = document.getElementById("answer2").value.toLowerCase();
-            let correctAnswers1 = ["echo"];
-            let correctAnswers2 = ["footsteps"];
+            let ans1 = document.getElementById("answer1").value.toLowerCase();
+            let ans2 = document.getElementById("answer2").value.toLowerCase();
 
-            if (correctAnswers1.includes(answer1) || correctAnswers2.includes(answer2)) {
-                document.getElementById("result").innerHTML = '✅ Correct! <a href="nextpage.html">Proceed to the next stage</a>';
+            if (ans1 === "echo" || ans2 === "footsteps") {
+                window.location.href = "finalpage.html"; // Redirect to next page
             } else {
-                document.getElementById("result").innerHTML = "❌ Wrong answer! Try again.";
+                document.getElementById("result").innerText = "Wrong answer! Try again.";
             }
         }
     </script>
+
 </body>
 </html>
