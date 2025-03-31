@@ -120,11 +120,9 @@ h1 {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 14px;
-    color: rgba(255, 255, 255, 0.05); /* Almost invisible */
-    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.03); /* Very faint glow */
-    filter: blur(2px); /* Adds extra haze */
-    opacity: 0.03; /* Super low opacity */
-    pointer-events: none; /* Prevent accidental highlighting */
+    color: rgba(255, 255, 255, 0.1); /* Super faint */
+    text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.1);
+    pointer-events: none; /* So they can't accidentally highlight it */
 }
 
 
