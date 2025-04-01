@@ -59,6 +59,7 @@ p {
   width: 150px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
+  z-index: 1;
 }
 
 .suspect:hover {
@@ -75,21 +76,23 @@ p {
 
 .speech-bubble {
   position: absolute;
-  top: -40px;
+  top: -50px; /* Moved further above to avoid overlap */
   left: 50%;
   transform: translateX(-50%);
-  background-color: #4CAF50;
+  background-color: #FF6F61; /* Changed to a soft coral for better contrast */
   color: white;
-  padding: 10px;
+  padding: 10px 15px;
   border-radius: 10px;
   font-size: 14px;
-  width: 140px;
+  width: 160px; /* Adjusted width */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 2; /* Ensure it is above the suspect cards */
 }
 
 .speech-bubble p {
   margin: 0;
   font-weight: bold;
+  text-align: center;
 }
 
 /* Buttons styling */
