@@ -82,6 +82,7 @@ p {
   font-size: 18px;
   color: #0077b6; /* Dark Blue */
   font-weight: bold;
+  margin-top: 10px; /* Space between image and name */
 }
 
 /* Speech Bubble - Updated color and positioning */
