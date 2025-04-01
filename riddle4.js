@@ -7,7 +7,7 @@ function checkAnswer(selectedSuspect) {
         // Redirect to final.html after correct answer
         setTimeout(() => {
             window.location.href = "final.html";  // Redirect to final.html
-        }, 2000);  // 2-second delay before redirect
+        }, 1000);  // 2-second delay before redirect
     } else {
         document.getElementById("result").innerHTML = "Wrong answer! Try again.";
         // No redirect for wrong answer, just display the message
