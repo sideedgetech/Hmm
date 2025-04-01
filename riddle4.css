@@ -5,17 +5,15 @@
   box-sizing: border-box;
 }
 
-/* Body styling with gradient background and blur effect */
+/* Body styling with gradient background */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(to bottom right, #00b4d8, #0077b6); /* Gradient Blue */
-  background-blur: 15px; /* Adding blur effect to the background */
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   color: #333;
-  filter: blur(8px); /* Applying a slight blur effect to the background */
 }
 
 /* Card Container */
