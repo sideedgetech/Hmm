@@ -91,15 +91,15 @@ button:hover {
     bottom: 10px;  /* Position it at the bottom */
     right: 10px;   /* Position it at the right */
     font-size: 14px;
-    color: rgba(255, 255, 255, 0.2); /* Less visible with a lower alpha */
+    color: rgba(255, 255, 255, 0.05); /* Very faint text */
     transform: rotate(-10deg); /* Slightly tilted */
-    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.1); /* Lighter shadow */
+    text-shadow: 0px 0px 2px rgba(255, 255, 255, 0.05); /* Very faint shadow */
     transition: opacity 0.3s ease-in-out;
 }
 
 .edge-text:hover {
-    opacity: 0.5; /* Slightly visible on hover */
-    color: rgba(255, 255, 255, 0.3); /* Slightly more visible on hover */
-    text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.2); /* Slightly stronger shadow */
+    opacity: 0.3; /* Even less visible on hover */
+    color: rgba(255, 255, 255, 0.1); /* Very faint on hover */
+    text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.1); /* Slightly stronger shadow on hover */
 }
 
