@@ -11,9 +11,10 @@ body {
     text-align: center;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
+    align-items: flex-start; /* Changed from center to flex-start */
+    min-height: 100vh;
+    height: auto; /* Allow content to expand */
+    overflow-y: auto; /* Enable scrolling */
 }
 
 .container {
@@ -25,37 +26,7 @@ body {
     backdrop-filter: blur(15px);
     box-shadow: 0 4px 40px rgba(50, 100, 200, 0.7);
     animation: fadeIn 1.5s ease-in-out;
-}
-
-@keyframes fadeIn {
-    0% { opacity: 0; transform: scale(0.9); }
-    100% { opacity: 1; transform: scale(1); }
-}
-
-/* Title Animation */
-h1 {
-    font-size: 3rem;
-    text-shadow: 0 0 35px rgba(100, 200, 255, 1);
-    font-weight: 700;
-    font-family: 'Poppins', sans-serif;
-    animation: glow 1.5s infinite alternate;
-}
-
-@keyframes glow {
-    0% { text-shadow: 0 0 25px rgba(100, 200, 255, 0.7); }
-    100% { text-shadow: 0 0 45px rgba(100, 200, 255, 1); }
-}
-
-/* Logo Styling */
-.logo {
-    width: 120px;
-    margin-bottom: 20px;
-    animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
+    margin: 30px auto; /* Allow spacing for scrolling */
 }
 
 /* Image Styling */
@@ -71,43 +42,17 @@ h1 {
     transform: scale(1.05) rotate(1deg);
 }
 
-/* Hidden Link Positions */
-.hidden-link {
-    position: absolute;
-    opacity: 0;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-}
-
-.hidden-link:hover {
-    opacity: 0.2;
-}
-
-/* Hint Text */
-.hint {
-    font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.9);
-    font-weight: 400;
-    margin-top: 15px;
-    animation: flicker 2s infinite alternate;
-}
-
-@keyframes flicker {
-    0% { opacity: 0.5; }
-    100% { opacity: 1; }
-}
+/* Ensure the Parent Container is Positioned Properly */
 .image-container {
     position: relative;
     display: inline-block;
 }
 
-/* Clickable Hidden Link (Aligned Properly) */
-/* Clickable Hidden Link (Aligned Properly) */
+/* Hidden Link Fix */
 .hidden-link {
     position: absolute;
-    top: 50%;  /* Adjust this based on the image */
-    left: 50%; 
+    top: 50%;
+    left: 50%;
     width: 120px;
     height: 30px;
     transform: translate(-50%, -50%);
@@ -123,33 +68,14 @@ h1 {
     background: rgba(255, 255, 255, 0.3);
 }
 
-/* Hazy and Hard-to-Spot Text (Now Positioned Correctly) */
-.hidden-text {
-    position: absolute;
-    top: 50%; /* Ensures it's inside the image */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 14px;
-    color: rgba(255, 255, 255, 0.25);
-    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3);
-    filter: blur(1px);
-    opacity: 0.4;
-    pointer-events: none;
-    width: 120px;
-    text-align: center;
-    transition: opacity 0.3s ease-in-out, filter 0.3s ease-in-out;
-}
+/* Ensure Scrolling */
+@media screen and (max-width: 768px) {
+    body {
+        align-items: flex-start;
+    }
 
-/* When Hovering, Make the Text Clearly Visible */
-.hidden-link:hover + .hidden-text {
-    opacity: 1;
-    filter: blur(0);
-    color: rgba(255, 255, 255, 0.8);
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
 }
-
-/* Ensure the Parent Container is Positioned Properly */
-.image-container {
-    position: relative;
-    display: inline-block;
-}
-
