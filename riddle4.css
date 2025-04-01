@@ -8,7 +8,7 @@
 /* Body styling with gradient background */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to bottom right, #4e73df, #1c3d8d); /* Blue gradient */
+  background: linear-gradient(to bottom right, #00b4d8, #0077b6); /* Updated gradient (Teal + Blue) */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,36 +18,38 @@ body {
 
 /* Card Container */
 .container {
-  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent card */
-  border-radius: 15px;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.95); /* Slightly less transparent */
+  border-radius: 20px;
+  box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.2);
   width: 80%;
-  max-width: 700px;
+  max-width: 750px;
   padding: 40px;
   text-align: center;
   z-index: 10; /* Ensure it appears above the gradient background */
 }
 
-/* Main Heading */
+/* Main Heading (Cookie Mystery) */
 h1 {
-  font-size: 40px;
+  font-size: 45px;
   margin-bottom: 20px;
   color: #333;
+  font-weight: bold;
 }
 
 /* Description text */
 p {
-  font-size: 18px;
-  margin-bottom: 30px;
-  color: #666;
+  font-size: 20px;
+  margin-bottom: 40px;
+  color: #555;
+  line-height: 1.5;
 }
 
 /* Suspects section */
 .suspects {
   display: flex;
   justify-content: space-around;
-  gap: 20px;
-  margin-bottom: 30px;
+  gap: 30px;
+  margin-bottom: 40px;
 }
 
 .suspect {
@@ -55,9 +57,9 @@ p {
   text-align: center;
   padding: 20px;
   background-color: #f9f9f9;
-  border-radius: 15px;
-  width: 150px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  width: 160px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
   z-index: 1;
 }
@@ -67,26 +69,33 @@ p {
 }
 
 .suspect-image {
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
-  border: 3px solid #4CAF50;
-  margin-bottom: 10px;
+  border: 5px solid #00b4d8;
+  margin-bottom: 15px;
 }
 
+.suspect-name {
+  font-size: 18px;
+  color: #0077b6; /* Dark Blue */
+  font-weight: bold;
+}
+
+/* Speech Bubble */
 .speech-bubble {
   position: absolute;
-  top: -50px; /* Moved further above to avoid overlap */
+  top: -60px; /* Moved further above to avoid overlap */
   left: 50%;
   transform: translateX(-50%);
-  background-color: #FF6F61; /* Changed to a soft coral for better contrast */
+  background-color: #ff6f61; /* Soft Coral */
   color: white;
-  padding: 10px 15px;
-  border-radius: 10px;
+  padding: 12px 18px;
+  border-radius: 12px;
   font-size: 14px;
-  width: 160px; /* Adjusted width */
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  z-index: 2; /* Ensure it is above the suspect cards */
+  width: 180px; /* Adjusted width */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+  z-index: 2; /* Ensure it's above the suspect cards */
 }
 
 .speech-bubble p {
@@ -97,25 +106,25 @@ p {
 
 /* Buttons styling */
 button {
-  padding: 15px 25px;
-  font-size: 18px;
-  margin: 10px;
-  background-color: #007bff;
+  padding: 18px 30px;
+  font-size: 20px;
+  margin: 15px;
+  background-color: #00b4d8;
   color: white;
   border: none;
-  border-radius: 10px;
+  border-radius: 12px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  width: 200px;
+  width: 220px;
 }
 
 button:hover {
-  background-color: #0056b3;
+  background-color: #0077b6;
 }
 
 /* Result message */
 #result {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: bold;
   margin-top: 20px;
   color: #333;
