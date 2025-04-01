@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riddle 3 - Decode the Hidden Code</title>
+    <link rel="stylesheet" href="riddle3.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Riddle #3</h1>
+        <p>These numbers hide a secret message. Decode them!</p>
+        <h2 class="coded-text">8-25-16-5 19-17-21-1-4</h2>  
+        
+        <div class="input-container">
+            <input type="text" id="answer" placeholder="Enter the correct word...">
+            <button onclick="checkAnswer()">Submit</button>
+        </div>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function checkAnswer() {
+            let ans = document.getElementById("answer").value.toLowerCase().trim();
+            
+            if (ans === "hype squad") {
+                window.location.href = "finalpage.html"; // Redirects to the next page
+            } else {
+                document.getElementById("result").innerText = "Wrong answer! Try again.";
+            }
+        }
+    </script>
+</body>
+</html>
