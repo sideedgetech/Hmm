@@ -1,79 +1,120 @@
-/* Basic layout */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  text-align: center;
-  padding: 50px;
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Body styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;
+}
+
+/* Container styling */
 .container {
-  background-color: white;
-  padding: 20px;
+  background-color: #ffffff;
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 800px;
+  padding: 30px;
+  text-align: center;
 }
 
 h1 {
   font-size: 36px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  color: #333;
 }
 
 p {
   font-size: 18px;
   margin-bottom: 30px;
+  color: #666;
 }
 
-/* Suspects */
+/* Suspects section */
 .suspects {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  gap: 20px;
   margin-bottom: 30px;
 }
 
 .suspect {
   position: relative;
   text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  width: 150px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.suspect:hover {
+  transform: scale(1.05);
 }
 
 .suspect-image {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  border: 3px solid #333;
+  border: 3px solid #4CAF50;
+  margin-bottom: 10px;
 }
 
 .speech-bubble {
   position: absolute;
-  top: -50px;
+  top: -40px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #f0f0f0;
+  background-color: #4CAF50;
+  color: white;
   padding: 10px;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  font-size: 16px;
-  width: 150px;
+  font-size: 14px;
+  width: 140px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Buttons */
+.speech-bubble p {
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Buttons styling */
 button {
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 15px 25px;
+  font-size: 18px;
   margin: 10px;
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 200px;
 }
 
 button:hover {
   background-color: #0056b3;
 }
 
-/* Result */
+/* Result message */
 #result {
-  font-size: 24px;
-  margin-top: 20px;
+  font-size: 22px;
   font-weight: bold;
+  margin-top: 20px;
+  color: #333;
+}
+
+button:focus {
+  outline: none;
 }
