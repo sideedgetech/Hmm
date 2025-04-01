@@ -36,13 +36,13 @@
         let ans1 = document.getElementById("answer1").value.trim().toLowerCase();
         let ans2 = document.getElementById("answer2").value.trim().toLowerCase();
 
-        // Check if both answers are correct
-        if ((ans1 === "Nix" || ans1 === "Phoenix") && ans2 === "chat revive") {
-            window.location.href = "riddle3.html"; // Redirect to next page
-        } else {
-            document.getElementById("result").innerText = "Wrong answers! Both answers are needed to proceed.";
-        }
+    // Convert both correct answers to lowercase for proper comparison
+    if ((ans1 === "nix" || ans1 === "phoenix") && ans2 === "chat revive") {
+        window.location.href = "riddle3.html"; // Redirect to next page
+    } else {
+        document.getElementById("result").innerText = "Wrong answers! Both answers are needed to proceed.";
     }
+}
     </script>
 
 </body>
