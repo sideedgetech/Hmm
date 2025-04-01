@@ -1,4 +1,4 @@
-* General Styling */
+/* General Styling */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Poppins:wght@600&display=swap');
 
 body {
@@ -12,8 +12,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh; /* Changed from height to min-height */
-    overflow: auto; /* Allow scrolling */
+    height: 100vh;
+    overflow: auto;
 }
 
 .container {
