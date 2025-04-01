@@ -14,7 +14,7 @@
 
         <div class="riddle-box">
             <p style="font-size: 24px; font-weight: bold; font-family: 'Georgia', serif; color: white;">
-                <strong>Riddle 1:</strong> Lines were drawn, guesses flew, Hype’s first game—who brought it to you?
+                <strong>Riddle 1:</strong> master roaster. master yapper. master of the server. master of coolness. who is it? 
             </p>
             <input type="text" id="answer1" placeholder="Your answer here">
         </div>
@@ -37,7 +37,7 @@
         let ans2 = document.getElementById("answer2").value.trim().toLowerCase();
 
         // Check if both answers are correct
-        if (ans1 === "faze" && ans2 === "chat revive") {
+        if ((ans1 === "Nix" || ans1 === "Phoenix") && ans2 === "chat revive") {
             window.location.href = "finalpage.html"; // Redirect to next page
         } else {
             document.getElementById("result").innerText = "Wrong answers! Both answers are needed to proceed.";
