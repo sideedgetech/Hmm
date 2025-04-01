@@ -1,19 +1,13 @@
-// Function to check the answer and display result
-function checkAnswer(suspect) {
-  const result = document.getElementById('result');
+// Function to check the selected answer
+function checkAnswer(selectedSuspect) {
+    const correctAnswer = 'fahhar';  // Set the correct answer here
 
-  // Display the wrong answer message for Kasen or Fahhar
-  if (suspect === 'kasen') {
-    result.textContent = "Wrong answer! Try again.";
-    setTimeout(function() {
-      window.location.href = "https://hypesquadriddle.vercel.app"; // Redirect to the specified page after 2 seconds
-    }, 2000);  // 2-second delay for redirection
-  } else if (suspect === 'fahhar') {
-    result.textContent = "Wrong answer! Try again.";
-    setTimeout(function() {
-      window.location.href = "https://hypesquadriddle.vercel.app"; // Redirect to the specified page after 2 seconds
-    }, 2000);  // 2-second delay for redirection
-  } else if (suspect === 'faze') {
-    result.textContent = "Correct! Faze was the killer!";
-  }
+    if (selectedSuspect === correctAnswer) {
+        document.getElementById("result").innerHTML = "Correct! Fahhar is the liar!";
+    } else {
+        document.getElementById("result").innerHTML = "Wrong answer! Try again.";
+        setTimeout(() => {
+            window.location.href = "https://hypesquadriddle.vercel.app";  // Redirect if wrong answer
+        }, 2000);  // 2-second delay before redirect
+    }
 }
