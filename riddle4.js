@@ -4,10 +4,12 @@ function checkAnswer(selectedSuspect) {
 
     if (selectedSuspect === correctAnswer) {
         document.getElementById("result").innerHTML = "Correct! Fahhar is the liar!";
+        // Redirect to final.html after correct answer
+        setTimeout(() => {
+            window.location.href = "final.html";  // Redirect to final.html
+        }, 2000);  // 2-second delay before redirect
     } else {
         document.getElementById("result").innerHTML = "Wrong answer! Try again.";
-        setTimeout(() => {
-            window.location.href = "https://hypesquadriddle.vercel.app";  // Redirect if wrong answer
-        }, 2000);  // 2-second delay before redirect
+        // No redirect for wrong answer, just display the message
     }
 }
