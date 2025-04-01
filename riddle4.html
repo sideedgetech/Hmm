@@ -1,1 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Cookie Mystery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>The Cookie Mystery</h1>
+    <p>Who smashed the cookie? Read their alibis carefully...</p>
 
+    <div class="suspects">
+      <div class="suspect" id="kasen">
+        <img src="kasen.png" alt="Kasen" class="suspect-image">
+        <div class="speech-bubble">
+          <p>"I was in my room, finishing up some work on my laptop."</p>
+        </div>
+      </div>
+
+      <div class="suspect" id="fahhar">
+        <img src="fahhar.png" alt="Fahhar" class="suspect-image">
+        <div class="speech-bubble">
+          <p>"I was in the kitchen, making some soup."</p>
+        </div>
+      </div>
+
+      <div class="suspect" id="faze">
+        <img src="faze.png" alt="Faze" class="suspect-image">
+        <div class="speech-bubble">
+          <p>"I was watching TV in the living room."</p>
+        </div>
+      </div>
+    </div>
+
+    <button onclick="checkAnswer('kasen')">Choose Kasen</button>
+    <button onclick="checkAnswer('fahhar')">Choose Fahhar</button>
+    <button onclick="checkAnswer('faze')">Choose Faze</button>
+
+    <div id="result"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
