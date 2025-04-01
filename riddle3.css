@@ -75,3 +75,20 @@ button:hover {
     background: linear-gradient(90deg, #637ea9, #4e6a92);
     box-shadow: 0 0 15px rgba(100, 200, 255, 0.5);
 }
+.edge-text {
+    position: fixed;
+    bottom: 10px;  /* Position it at the bottom */
+    right: 10px;   /* Position it at the right */
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5); /* Faint text */
+    transform: rotate(-10deg); /* Slightly tilted */
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3);
+    transition: opacity 0.3s ease-in-out;
+}
+
+.edge-text:hover {
+    opacity: 1;
+    color: white;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+}
+
