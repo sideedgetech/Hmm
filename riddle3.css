@@ -86,9 +86,20 @@ button:hover {
     transition: opacity 0.3s ease-in-out;
 }
 
+.edge-text {
+    position: fixed;
+    bottom: 10px;  /* Position it at the bottom */
+    right: 10px;   /* Position it at the right */
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.2); /* Less visible with a lower alpha */
+    transform: rotate(-10deg); /* Slightly tilted */
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.1); /* Lighter shadow */
+    transition: opacity 0.3s ease-in-out;
+}
+
 .edge-text:hover {
-    opacity: 1;
-    color: white;
-    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+    opacity: 0.5; /* Slightly visible on hover */
+    color: rgba(255, 255, 255, 0.3); /* Slightly more visible on hover */
+    text-shadow: 0px 0px 8px rgba(255, 255, 255, 0.2); /* Slightly stronger shadow */
 }
 
