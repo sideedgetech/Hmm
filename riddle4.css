@@ -5,25 +5,27 @@
   box-sizing: border-box;
 }
 
-/* Body styling with gradient background */
+/* Body styling with gradient background and blur effect */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to bottom right, #00b4d8, #0077b6); /* Updated gradient (Teal + Blue) */
+  background: linear-gradient(to bottom right, #00b4d8, #0077b6); /* Gradient Blue */
+  background-blur: 15px; /* Adding blur effect to the background */
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   color: #333;
+  filter: blur(8px); /* Applying a slight blur effect to the background */
 }
 
 /* Card Container */
 .container {
-  background-color: rgba(255, 255, 255, 0.95); /* Slightly less transparent */
+  background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent */
   border-radius: 20px;
   box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.2);
   width: 80%;
   max-width: 750px;
-  padding: 60px 40px 40px 40px; /* Increased top padding for spacing */
+  padding: 60px 40px 40px 40px; /* Increased padding */
   text-align: center;
   z-index: 10; /* Ensure it appears above the gradient background */
 }
@@ -34,6 +36,7 @@ h1 {
   margin-bottom: 20px;
   color: #333;
   font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Added a subtle shadow for better visibility */
 }
 
 /* Description text */
@@ -83,18 +86,18 @@ p {
   font-weight: bold;
 }
 
-/* Speech Bubble */
+/* Speech Bubble - Updated color and positioning */
 .speech-bubble {
   position: absolute;
-  top: -60px; /* Moved further above to avoid overlap */
+  top: -90px; /* Moved the speech bubble further above */
   left: 50%;
   transform: translateX(-50%);
-  background-color: #ff6f61; /* Soft Coral */
+  background-color: #ff7043; /* Changed to a more vibrant orange */
   color: white;
-  padding: 12px 18px;
+  padding: 14px 20px;
   border-radius: 12px;
   font-size: 14px;
-  width: 180px; /* Adjusted width */
+  width: 200px; /* Adjusted width */
   box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
   z-index: 2; /* Ensure it's above the suspect cards */
 }
@@ -108,4 +111,29 @@ p {
 /* Buttons styling */
 button {
   padding: 18px 30px;
-  font-size
+  font-size: 20px;
+  margin: 15px;
+  background-color: #00b4d8;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 220px;
+}
+
+button:hover {
+  background-color: #0077b6;
+}
+
+/* Result message */
+#result {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #333;
+}
+
+button:focus {
+  outline: none;
+}
